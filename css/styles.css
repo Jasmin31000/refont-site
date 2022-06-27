@@ -18,6 +18,12 @@ body{
   align-items: center;
   min-height: 100vh;
   background: var(--clr);
+  flex-direction: column;
+  gap: 20px;
+}
+section{
+  flex-direction: column;
+  gap: 60px;
 }
 .nav{
   position: relative;
@@ -123,4 +129,72 @@ body{
 }
 .nav ul li:nth-child(5).active ~ .indicator{
   transform: translateX(calc(70px * 4));
+}
+
+
+.bouton{
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  transition: 0.5s;
+  border-radius: 10% / 30%;
+}
+.bouton:hover{
+  letter-spacing: 0.25em;
+  background: var(--clr2);
+  color: var(--clr2);
+  box-shadow: 0 0 35px var(--clr2);
+}
+.bouton::before{
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+  border-radius: 10% / 30%;
+}
+.bouton span{
+  position: relative;
+  z-index: 1;
+}
+.bouton i{
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.bouton i::before{
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 80%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--clr2);
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  border-radius: 100%;
+}
+.bouton:hover i::before{
+  left: 20%;
+}
+.bouton i::after{
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 20%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--clr2);
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  border-radius: 100%;
+}
+.bouton:hover i::after{
+  left: 80%;
 }
