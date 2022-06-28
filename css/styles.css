@@ -19,7 +19,10 @@ body{
   justify-content: center;
   align-items: center;
   background: var(--clr);
-  padding-top: 35px;
+  padding-top: 40px;
+  margin-left: 1em;
+  margin-right: 1em;
+  flex-direction: column;
 }
 .bnav{
   position: relative;
@@ -78,6 +81,11 @@ body{
   opacity: 1;
   transform: translateY(10px);
 }
+.nav.fixed{
+  position:fixed;
+  top:0;
+  z-index:1000;
+}
 .indic{
   position: absolute;
   top: -50%;
@@ -87,28 +95,6 @@ body{
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
-}
-.indic::before{
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -22px;
-  width: 20px;
-  height: 20px;
-  background: transparent;
-  border-top-right-radius: 95%;
-  box-shadow: 0px -10px 0 0 var(--clr);
-}
-.indic::after{
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -22px;
-  width: 20px;
-  height: 20px;
-  background: transparent;
-  border-top-left-radius: 95%;
-  box-shadow: 0px -10px 0 0 var(--clr);
 }
 .bnav .contenaire .list:nth-child(1).active ~ .indic{
   transform: translateX(calc(70px * 0));
@@ -138,4 +124,69 @@ body{
   height: auto;
   border-radius: 10% / 30%;
   box-shadow: 0 0 35px var(--clr2);
+}
+.pagehead{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5em;
+  background: var(--clr1);
+  border-radius: 10px;
+  box-shadow: 0 0 35px var(--clr2);
+}
+h1{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5em;
+}
+h2{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: italic;
+}
+.contenfond{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.bulle{
+  position: relative;
+  display: flex;
+}
+.bulle .xbul{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+.bulle .xbul:nth-child(even){
+  background: var(--clr2);
+  box-shadow: 0 0 0 10px #1e9bff44, 0 0 50px var(--clr2), 0 0 100px var(--clr2);
+}
+@keyframes animate{
+  0%
+  {
+    transform: translateY(100vh) scale(0);
+  }
+  100%
+  {
+    transform: translateY(-10vh) scale(1);
+  }
 }
