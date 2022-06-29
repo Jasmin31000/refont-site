@@ -13,6 +13,7 @@
   --clr: #222327;
   --clr1: #fff;
   --clr2: #1e9bff;
+  --clr3: #E0FFFF;
 }
 body{
   display: flex;
@@ -134,9 +135,43 @@ body{
   justify-content: center;
   width: 100%;
   margin-top: 5em;
-  background: var(--clr1);
+  background: var(--clr);
   border-radius: 10px;
   box-shadow: 0 0 35px var(--clr2);
+  overflow: hidden;
+}
+.pagehead::before{
+  content:'';
+  position: absolute;
+  width: 150px;
+  height: 2000%;
+  background: var(--clr2);
+  animation: animate1 4s linear infinite;
+}
+.pagehead::after{
+  content:'';
+  position: absolute;
+  inset: 4px;
+  background: var(--clr1);
+  border-radius: 10px;
+}
+@keyframes animate1{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+.pagehead h1{
+  position: relative;
+  z-index: 10;
+}
+.pagehead h2{
+  position: relative;
+  z-index: 10;
 }
 h1{
   position: relative;
