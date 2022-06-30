@@ -274,15 +274,15 @@ h2{
   position: absolute;
   width: 150px;
   height: 180%;
-  background: var(--clr2);
+  background: linear-gradient(var(--clr2),#d400d4);
   animation: animate1 4s linear infinite;
 }
 .dtar::after{
   content: '';
   position: absolute;
-  inset: 4px;
+  inset: 2px;
   background: var(--clr);
-  border-radius: 10px;
+  border-radius: 9px;
 }
 @keyframes animate1 {
   0%{
