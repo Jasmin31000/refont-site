@@ -67,7 +67,7 @@ body{
   transition: 0.5s;
   color: var(--clr);
 }
-.bnav .contenaire .list.active .lien .icon{
+.bnav .contenaire .list .lien.active .icon{
   transform: translateY(-32px);
 }
 .bnav .contenaire .list .lien .text{
@@ -80,7 +80,7 @@ body{
   opacity: 0;
   transform: translateY(20px);
 }
-.bnav .contenaire .list.active .lien .text{
+.bnav .contenaire .list .lien.active .text{
   opacity: 1;
   transform: translateY(10px);
 }
@@ -178,7 +178,7 @@ body{
   transition: 0.5s;
   color: var(--clr);
 }
-.bnavscroll .contenaire .list.active .lien .icon{
+.bnavscroll .contenaire .list .lien.active .icon{
   transform: translateX(55px);
 }
 .bnavscroll .contenaire .list .lien .text{
@@ -201,20 +201,20 @@ body{
   border: 6px solid var(--clr);
   transition: 0.5s;
 }
-.bnavscroll .contenaire .list.active .lien .text{
+.bnavscroll .contenaire .list .lien.active .text{
   opacity: 1;
   transform: translateX(-10px);
 }
-.bnavscroll .contenaire .list:nth-child(1).active ~ .indicscroll{
+.bnavscroll .contenaire .list:nth-child(1) .lien.active ~ .indicscroll{
   transform: translateY(calc(70px * 0));
 }
-.bnavscroll .contenaire .list:nth-child(2).active ~ .indicscroll{
+.bnavscroll .contenaire .list:nth-child(2) .lien.active ~ .indicscroll{
   transform: translateY(calc(70px * 1));
 }
-.bnavscroll .contenaire .list:nth-child(3).active ~ .indicscroll{
+.bnavscroll .contenaire .list:nth-child(3) .lien.active ~ .indicscroll{
   transform: translateY(calc(70px * 2));
 }
-.bnavscroll .contenaire .list:nth-child(4).active ~ .indicscroll{
+.bnavscroll .contenaire .list:nth-child(4) .lien.active ~ .indicscroll{
   transform: translateY(calc(70px * 3));
 }
 .bnavscroll .clogo{
