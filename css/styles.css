@@ -67,7 +67,7 @@ body{
   transition: 0.5s;
   color: var(--clr);
 }
-.bnav .contenaire .list .lien.active .icon{
+.bnav .contenaire .list.active .lien .icon{
   transform: translateY(-32px);
 }
 .bnav .contenaire .list .lien .text{
@@ -80,7 +80,7 @@ body{
   opacity: 0;
   transform: translateY(20px);
 }
-.bnav .contenaire .list .lien.active .text{
+.bnav .contenaire .list.active .lien .text{
   opacity: 1;
   transform: translateY(10px);
 }
@@ -98,6 +98,10 @@ body{
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
+  opacity: 0;
+}
+.bnav .contenaire .list.active ~ .indic{
+  opacity: 1;
 }
 .bnav .contenaire .list:nth-child(1).active ~ .indic{
   transform: translateX(calc(70px * 0));
@@ -178,7 +182,7 @@ body{
   transition: 0.5s;
   color: var(--clr);
 }
-.bnavscroll .contenaire .list .lien.active .icon{
+.bnavscroll .contenaire .list.active .lien .icon{
   transform: translateX(55px);
 }
 .bnavscroll .contenaire .list .lien .text{
@@ -200,21 +204,25 @@ body{
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
+  opacity: 0;
 }
-.bnavscroll .contenaire .list .lien.active .text{
+.bnavscroll .contenaire .list.active ~ .indicscroll{
+  opacity: 1;
+}
+.bnavscroll .contenaire .list.active .lien .text{
   opacity: 1;
   transform: translateX(-10px);
 }
-.bnavscroll .contenaire .list:nth-child(1) .lien.active ~ .indicscroll{
+.bnavscroll .contenaire .list:nth-child(1).active ~ .indicscroll{
   transform: translateY(calc(70px * 0));
 }
-.bnavscroll .contenaire .list:nth-child(2) .lien.active ~ .indicscroll{
+.bnavscroll .contenaire .list:nth-child(2).active ~ .indicscroll{
   transform: translateY(calc(70px * 1));
 }
-.bnavscroll .contenaire .list:nth-child(3) .lien.active ~ .indicscroll{
+.bnavscroll .contenaire .list:nth-child(3).active ~ .indicscroll{
   transform: translateY(calc(70px * 2));
 }
-.bnavscroll .contenaire .list:nth-child(4) .lien.active ~ .indicscroll{
+.bnavscroll .contenaire .list:nth-child(4).active ~ .indicscroll{
   transform: translateY(calc(70px * 3));
 }
 .bnavscroll .clogo{
@@ -305,7 +313,7 @@ h2{
   height: auto;
   background: var(--clr1);
   border-radius: 10px;
-  margin-top: 5em;
+  margin-top: 6em;
 }
 .titre{
   background: var(--clr1);
@@ -468,7 +476,7 @@ h2{
   background-position: center center;
   background-size: cover;
   border-radius: 10px;
-  margin-top: 5em;
+  margin-top: 6em;
 }
 .dccont{
   position: relative;
