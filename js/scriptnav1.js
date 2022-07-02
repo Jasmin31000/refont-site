@@ -9,7 +9,7 @@ function navHighlighter() {
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
 
-    const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
+    const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 150;
     sectionId = current.getAttribute("id");
 
     if (
