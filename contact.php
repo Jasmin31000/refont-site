@@ -103,7 +103,7 @@
             if($retour){
               echo "<div class='container'><div class='text-center'><p>Le mail à bien été envoyer.</p></div></div>";
             } else{
-              echo "<div class='container'><div class='text-center'><p>Le mail à bien n'a pas été envoyer.</p></div></div>";
+              echo "<div class='container'><div class='text-center'><p>Le mail n'a pas été envoyer.</p></div></div>";
             }
           }
           ?>
